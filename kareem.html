@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kareem Café</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#ffd54f,#ffb300,#fff176);
+background-size:400% 400%;
+animation:bgmove 10s ease infinite;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+header{
+text-align:center;
+padding:50px 20px;
+}
+
+header h1{
+font-size:65px;
+color:#fff;
+text-shadow:0 0 20px #ff9800;
+}
+
+header p{
+font-size:22px;
+color:#fff;
+}
+
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+padding:20px;
+}
+
+.rgb-btn{
+position:relative;
+display:inline-block;
+padding:15px 35px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+background:#222;
+border-radius:15px;
+overflow:hidden;
+}
+
+.rgb-btn::before{
+content:"";
+position:absolute;
+inset:-4px;
+background:linear-gradient(
+90deg,
+red,
+orange,
+yellow,
+lime,
+cyan,
+blue,
+violet,
+red
+);
+background-size:600%;
+animation:rgbmove 3s linear infinite;
+z-index:-2;
+}
+
+.rgb-btn::after{
+content:"";
+position:absolute;
+inset:3px;
+background:#222;
+border-radius:12px;
+z-index:-1;
+}
+
+@keyframes rgbmove{
+0%{background-position:0%}
+100%{background-position:600%}
+}
+
+.rgb-btn:hover{
+transform:scale(1.08);
+box-shadow:
+0 0 20px red,
+0 0 40px cyan,
+0 0 60px violet;
+}
+
+.section{
+width:90%;
+max-width:900px;
+margin:25px auto;
+background:white;
+border-radius:25px;
+padding:25px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+.section h2{
+text-align:center;
+color:#ff9800;
+margin-bottom:20px;
+font-size:30px;
+}
+
+.item{
+display:flex;
+justify-content:space-between;
+padding:12px;
+border-bottom:1px solid #ddd;
+font-size:18px;
+}
+
+.whatsapp{
+position:fixed;
+left:20px;
+bottom:20px;
+width:70px;
+height:70px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:35px;
+text-decoration:none;
+box-shadow:0 0 25px #25D366;
+z-index:999;
+}
+
+#topBtn{
+position:fixed;
+right:20px;
+bottom:20px;
+width:70px;
+height:70px;
+border:none;
+border-radius:50%;
+background:#ff4081;
+color:white;
+font-size:30px;
+cursor:pointer;
+box-shadow:0 0 25px #ff4081;
+z-index:999;
+}
+
+footer{
+text-align:center;
+padding:30px;
+font-size:20px;
+color:#333;
+font-weight:bold;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<h1>☕ Kareem Café</h1>
+<p>كريب • وافل • ميلك شيك • سموذي • موهيتو</p>
+</header>
+
+<nav>
+<a class="rgb-btn" href="#crepe">الكريب</a>
+<a class="rgb-btn" href="#waffle">الوافل</a>
+<a class="rgb-btn" href="#milkshake">الميلك شيك</a>
+<a class="rgb-btn" href="#smoothie">السموذي</a>
+<a class="rgb-btn" href="#mojito">الموهيتو</a>
+</nav>
+
+<div class="section" id="crepe">
+<h2>🥞 الكريب</h2>
+<div class="item"><span>نوتيلا</span><span>12₪</span></div>
+<div class="item"><span>لوتس</span><span>15₪</span></div>
+<div class="item"><span>بستاشيو</span><span>15₪</span></div>
+<div class="item"><span>كيندر</span><span>15₪</span></div>
+<div class="item"><span>فيتوتشيني</span><span>17₪</span></div>
+</div>
+
+<div class="section" id="waffle">
+<h2>🧇 الوافل</h2>
+<div class="item"><span>نوتيلا</span><span>12₪</span></div>
+<div class="item"><span>لوتس</span><span>15₪</span></div>
+<div class="item"><span>بستاشيو</span><span>15₪</span></div>
+<div class="item"><span>كيندر</span><span>15₪</span></div>
+<div class="item"><span>الفصول الأربعة</span><span>17₪</span></div>
+<div class="item"><span>ستيك وافل</span><span>5₪</span></div>
+<div class="item"><span>فشافيش</span><span>5₪</span></div>
+</div>
+
+<div class="section" id="milkshake">
+<h2>🥤 الميلك شيك</h2>
+<div class="item"><span>أوريو</span><span>12₪</span></div>
+<div class="item"><span>كورنيتو</span><span>12₪</span></div>
+<div class="item"><span>لوتس</span><span>12₪</span></div>
+<div class="item"><span>كيندر</span><span>12₪</span></div>
+<div class="item"><span>فانيلا</span><span>12₪</span></div>
+<div class="item"><span>فراولة</span><span>12₪</span></div>
+<div class="item"><span>بلوبيري</span><span>12₪</span></div>
+<div class="item"><span>سيريلاك</span><span>12₪</span></div>
+<div class="item"><span>فستق حلبي</span><span>15₪</span></div>
+<div class="item"><span>نوتيلا</span><span>12₪</span></div>
+</div>
+
+<div class="section" id="smoothie">
+<h2>🍓 السموذي</h2>
+<div class="item"><span>خوخ</span><span>10₪</span></div>
+<div class="item"><span>فراولة</span><span>10₪</span></div>
+<div class="item"><span>أناناس</span><span>10₪</span></div>
+<div class="item"><span>بلوبيري</span><span>10₪</span></div>
+<div class="item"><span>ليمون ونعنع</span><span>10₪</span></div>
+<div class="item"><span>فلوريستد</span><span>10₪</span></div>
+</div>
+
+<div class="section" id="mojito">
+<h2>🍹 الموهيتو</h2>
+<div class="item"><span>بلوبيري</span><span>10₪</span></div>
+<div class="item"><span>ميكس بيري</span><span>10₪</span></div>
+<div class="item"><span>فراولة</span><span>10₪</span></div>
+<div class="item"><span>بطيخ</span><span>10₪</span></div>
+<div class="item"><span>أناناس</span><span>10₪</span></div>
+<div class="item"><span>بوملي</span><span>10₪</span></div>
+<div class="item"><span>تفاح</span><span>10₪</span></div>
+<div class="item"><span>ليمون ونعنع</span><span>10₪</span></div>
+<div class="item"><span>كاندي</span><span>10₪</span></div>
+<div class="item"><span>كيوي</span><span>10₪</span></div>
+<div class="item"><span>خوخ</span><span>10₪</span></div>
+</div>
+<footer>
+© Kareem Café 2026
+</footer>
+
+<a href="https://wa.me/970000000000" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<button id="topBtn">↑</button>
+
+<script>
+document.getElementById("topBtn").onclick=function(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+};
+</script>
+
+</body>
+</html>
